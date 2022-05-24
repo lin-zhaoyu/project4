@@ -1,4 +1,4 @@
-# [Project Name] by EzRhinos
+# [Project Name] by ezRhinos
 
   ZhaoYu Lin  
   Raymond Yeung  
