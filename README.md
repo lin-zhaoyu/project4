@@ -1,7 +1,8 @@
 # [Project Name] by EzRhinos
- -Raymond Yeung
- -ZhaoYu Lin
- -Edwin Zheng
+
+  ZhaoYu Lin  
+  Raymond Yeung  
+  Edwin Zheng  
   
 ## About  
 Task manager/focus app with incentives on completing tasks. 
