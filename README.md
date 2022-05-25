@@ -1,8 +1,8 @@
 # [Project Name] by ezRhinos
 
-  Zhao Yu Lin  
-  Raymond Yeung  
-  Edwin Zheng  
+  Zhao Yu Lin - PM, HTML, JS  
+  Raymond Yeung - css, python/flask   
+  Edwin Zheng - sqlite    
   
 ## About  
 Task manager/focus app with incentives on completing tasks. 
