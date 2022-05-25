@@ -1,6 +1,6 @@
 # [Project Name] by ezRhinos
 
-  Zhao Yu Lin - PM, HTML, JS  
+  Zhao Yu Lin - pm, html, js  
   Raymond Yeung - css, python/flask   
   Edwin Zheng - sqlite    
   
