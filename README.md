@@ -1,6 +1,6 @@
 # [Project Name] by ezRhinos
 
-  ZhaoYu Lin  
+  Zhao Yu Lin  
   Raymond Yeung  
   Edwin Zheng  
   
