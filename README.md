@@ -1,4 +1,4 @@
-# [Project Name] by ezRhinos
+# tas by ezRhinos
 
   Zhao Yu Lin - pm, Html, js  
   Raymond Yeung - css, python/flask   
