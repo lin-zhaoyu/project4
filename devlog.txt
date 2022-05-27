@@ -14,3 +14,6 @@ zhaoL -- 5-26 08:40
 raymondY -- 5-27 08:23
 -basic file hierarchy
 
+zhaoL -- 5-27 08:27
+-changed readme
+-connected flask to web
