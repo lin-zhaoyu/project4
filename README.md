@@ -5,8 +5,7 @@
   Edwin Zheng - sqlite    
   
 ## About  
-Task manager/focus app with incentives on completing tasks. 
-
+A todo-list with a minimalistic and unclustered interface. Users will be rewarded and incentivized to keep to their schedule.  
 ## How to install and run our website:
 
 ### 1. Clone the repository in terminal:
