@@ -10,3 +10,7 @@ zhaoL -- 5-25 08:40
 
 zhaoL -- 5-26 08:40
 -site map and component map
+
+raymondY -- 5-27 08:23
+-basic file hierarchy
+
