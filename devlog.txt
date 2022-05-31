@@ -17,3 +17,6 @@ raymondY -- 5-27 08:23
 zhaoL -- 5-27 08:27
 -changed readme
 -connected flask to web
+
+zhaoL -- 5-31 08:39
+-started html and css for home page
