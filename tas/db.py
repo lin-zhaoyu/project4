@@ -21,3 +21,14 @@ def init_db():
     c = d.cursor()
     c.execute(create_users)
     d.commit()
+
+def init_task(username):
+    d = get_db()
+    c = d.cursor()
+    c.execute('''CREATE TABLE IF NOT EXISTS ? (
+                    ID INTEGER PRIMARY KEY
+                    tasktitle TEXT
+                    taskdesc TEXT
+                    datetime TEXT
+                    completion BOOLEAN)''', (username))
+    d.commit()
