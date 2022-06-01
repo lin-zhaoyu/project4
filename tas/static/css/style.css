@@ -3,7 +3,9 @@
   margin: auto;
   color: #FFFFFF;
 }
-
+.todo_caption{
+  color: #6495ED;
+}
 body{
   background-color: rgb(113, 0, 105);
 }
