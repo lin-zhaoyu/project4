@@ -1,0 +1,23 @@
+<h3>Login</h3>
+
+{%if "Login" in name%}
+<p>
+  <form action = "/login" method="POST">
+    <input name = "username" type="text" >
+    <input name="password" type="password">
+    <button type="submit">Login</button>
+    <br>
+    <a href="/signup">Don't have an account? Register now</a>
+    {{error}}
+  </form>
+{%else%}
+<p>
+  <form action = "/signup" method="POST">
+    <input name = "username" type="text" >
+    <input name="password" type="password">
+    <button type="submit">Register</button>
+    <br>
+    <a href="/login">Login</a>
+    {{error}}
+  </form>
+{% endif %}

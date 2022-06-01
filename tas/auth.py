@@ -68,9 +68,11 @@ def signup():
                     c.execute(
                         """SELECT username FROM users WHERE username = ?;""", (request.form['username'],))
                     exists = c.fetchone()
-                    d.close()
+                    #d.close()
                     if (exists != None):
+                        print(request.form['username'])
                         init_task(request.form['username'])
+                        d.close()
                         return render_template("login.html", action="/login", name="Login", success="Signed up successfully!")
                     else:
                         return render_template("login.html", action="/signup", name="Sign Up", error="Some error occurred. Please try signing up again.")

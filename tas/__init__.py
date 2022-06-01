@@ -1,6 +1,7 @@
 from flask import Flask, render_template, redirect, request, session, g, Blueprint, jsonify
 import os
 import db
+import auth
 
 def create_app():
     app = Flask(__name__)
@@ -18,6 +19,8 @@ def create_app():
     return app
 
 app = create_app()
+
+app.register_blueprint(auth.bp)
 
 with app.app_context():
     db.init_db()
