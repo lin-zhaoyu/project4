@@ -3,7 +3,10 @@
   margin: auto;
   color: #FFFFFF;
 }
-
+.todo_caption{
+  color: #6495ED;
+}
 body{
-  background-color: yellow;
+  background-color: #FAF3DD;
+  /* background-color: #F7FFF6; */
 }
