@@ -50,6 +50,9 @@ def signup():
                 if isAlphaNum(username.decode('utf-8')) == None:
                     d.close()
                     return render_template("login.html", user=session.get('username'), action="/signup", name="Sign Up", error="Username can only contain alphanumeric characters.")
+                if str(username[0]).isdigit() == True:
+                    d.close()
+                    return render_template("login.html", user=session.get('username'), action="/signup", name="Sign Up", error="Username cannot start with a number")
                 # Check to see if username is of proper length
                 if len(username) < 5 or len(username) > 15:
                     d.close()
