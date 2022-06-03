@@ -9,3 +9,11 @@
 body{
   background-color: rgb(113, 0, 105);
 }
+.cusbtn{
+  background-color: rgb(49, 49, 49); 
+  color: white; 
+  font-weight: bold;
+}
+h3{
+  color:#FFFFFF
+}
