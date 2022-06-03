@@ -1,0 +1,8 @@
+- home Page
+  - login button
+  - team logo/description of the task
+- second page with tasks due in the next week/ month - calendar icon
+- third page with rewards, completions, goals
+  - completed tasks
+  - over due
+  - priorities
