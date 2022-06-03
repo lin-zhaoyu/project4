@@ -20,3 +20,9 @@ zhaoL -- 5-27 08:27
 
 zhaoL -- 5-31 08:39
 -started html and css for home page
+
+raymondY -- 5-31 08:40
+-started login and indiv tasks
+
+raymondY -- 6-3 08:40
+-fixed login and database creation
