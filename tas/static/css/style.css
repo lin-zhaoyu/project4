@@ -9,9 +9,14 @@
 }
 
 body{
-  background-color: rgb(113, 0, 105);
   margin: 0;
   min-width: 250px;
+  background-image:     
+    linear-gradient(
+    rgba(0, 0, 0, 0.35), 
+    rgba(0, 0, 0, 0.35)
+  ),url("../background.jpg");
+  background-repeat: repeat;
 }
 
 .cusbtn{
