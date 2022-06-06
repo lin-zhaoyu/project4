@@ -32,6 +32,10 @@ with app.app_context():
 def home():
     return render_template("index.html")
 
+# temp just for testing
+@app.route("/tas")
+def navbar():
+    return render_template("tas.html")
 
 if __name__ == "__main__":
     app.debug = True
