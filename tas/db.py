@@ -25,10 +25,10 @@ def init_db():
 def init_task(username):
     d = get_db()
     c = d.cursor()
-    c.execute('''CREATE TABLE IF NOT EXISTS ? (
-                    ID INTEGER PRIMARY KEY
-                    tasktitle TEXT
-                    taskdesc TEXT
-                    datetime TEXT
-                    completion BOOLEAN)''', (username))
+    c.execute('''CREATE TABLE IF NOT EXISTS {} (
+                    ID INTEGER PRIMARY KEY,
+                    tasktitle TEXT,
+                    taskdesc TEXT,
+                    datetime TEXT,
+                    completion BOOLEAN)'''.format(username))
     d.commit()
