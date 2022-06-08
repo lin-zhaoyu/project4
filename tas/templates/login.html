@@ -11,28 +11,39 @@
     </head>
     <Body>
         <div class="d-grid justify-content-md-center" style="padding-top:20px">
-          <h3>Login</h3>
 
           {%if "Login" in name%}
+          <h3>Login</h3>
           <p>
             <form action = "/login" method="POST">
-              <input name = "username" type="text" >
-              <br>
-              <input name="password" type="password">
+              <div style="white-space:nowrap">
+                <label for="user">:Username</label>
+                <input class="form" name = "username" type="text" id="user"> 
+              </div>
+              <div style="white-space:nowrap">
+                <label for="pass">:Password</label>
+                <input class="form" name="password" type="password" id="pass">
+              </div>
               <button class="btn cusbtn" type="submit">Login</button>
               <br>
-              <a href="/signup">Don't have an account? Register now</a>
+              <a style="text-shadow: 2px; color:white"href="/signup">Don't have an account? Register now</a>
               {{error}}
             </form>
           {%else%}
+          <h3>Register</h3>
           <p>
-            <form action = "/signup" method="POST">
-              <input name = "username" type="text" >
-              <br>
-              <input name="password" type="password">
+            <form action = "/login" method="POST">
+              <div style="white-space:nowrap">
+                <label for="user">:Username</label>
+                <input class="form" name = "username" type="text" id="user"> 
+              </div>
+              <div style="white-space:nowrap">
+                <label for="pass">:Password</label>
+                <input class="form" name="password" type="password" id="pass">
+              </div>
               <button class="btn cusbtn" type="submit">Register</button>
               <br>
-              <a href="/login">Already have an account? Login</a>
+              <a style="text-shadow: 2px; color:white"href="/login">Already have an account? Login</a>
               {{error}}
             </form>
           {% endif %}

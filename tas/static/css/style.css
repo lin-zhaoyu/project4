@@ -144,3 +144,18 @@ input {
 .addBtn:hover {
   background-color: #bbb;
 }
+
+.form {
+  width: 50%;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+label{
+  font-size: 16px;
+  padding: 5px;
+  color: white;
+  font-weight: bold;
+  margin: 5px
+}
