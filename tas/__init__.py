@@ -44,7 +44,13 @@ def goals():
 @app.route("/rewards")
 def rewards():
     return render_template("rewards.html")
-
+@app.route("/logout")
+def logout():
+    """
+        Logouts user
+    """
+    session.pop('username', default=None)
+    return redirect("/")
 if __name__ == "__main__":
     app.debug = True
     app.run()

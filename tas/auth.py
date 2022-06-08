@@ -118,8 +118,9 @@ def login():
         else:
             return render_template("login.html", name="Login", action="/login", error="An error occurred. Please try logging in again.")
     else:
-        return render_template("login.html", action="/login", name="Login")
-
+        print("logged in 1")
+        return render_template("tas.html", action="/login", name="Login")
+        # this is for logging in again*
 
 # Logout function
 @bp.route("/logout")
