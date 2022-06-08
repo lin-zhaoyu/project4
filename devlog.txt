@@ -30,3 +30,4 @@ raymondY -- 6-3 08:40
 zhaoL -- 6-8 8:40
 -rewards page
 - html and js fixing
+-checklist checking
