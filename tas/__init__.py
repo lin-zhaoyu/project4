@@ -34,8 +34,16 @@ def home():
 
 # temp just for testing
 @app.route("/tas")
-def navbar():
+def tas():
     return render_template("tas.html")
+
+@app.route("/goals")
+def goals():
+    return render_template("goals.html")
+
+@app.route("/rewards")
+def rewards():
+    return render_template("rewards.html")
 
 if __name__ == "__main__":
     app.debug = True

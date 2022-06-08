@@ -17,9 +17,9 @@
                 <form method="post" action="/">
                 <nav class="nav nav-pills flex-column flex-sm-row fw-bold">
                     
-                    <a class="flex-sm-fill text-sm-center nav-link" style="background-color: rgb(172, 220, 224, {% block tasbut %} {%endblock tasbut %}); color: white;" aria-current="page" href="">Tasks</a>
-                    <a class="flex-sm-fill text-sm-center nav-link" style="background-color: rgb(172, 220, 224, {% block goalbut %} {%endblock goalbut %}); color: white;"href="">Goals</a>
-                    <a class="flex-sm-fill text-sm-center nav-link" style="background-color: rgb(172, 220, 224, {% block rewardbut %} {%endblock rewardbut %}); color: white;"href="">Rewards</a>
+                    <a class="flex-sm-fill text-sm-center nav-link" style="background-color: rgb(172, 220, 224, {% block tasbut %} {%endblock tasbut %}); color: white;" aria-current="page" href="{{url_for('tas')}}">Tasks</a>
+                    <a class="flex-sm-fill text-sm-center nav-link" style="background-color: rgb(172, 220, 224, {% block goalbut %} {%endblock goalbut %}); color: white;"href="{{url_for('goals')}}">Goals</a>
+                    <a class="flex-sm-fill text-sm-center nav-link" style="background-color: rgb(172, 220, 224, {% block rewardbut %} {%endblock rewardbut %}); color: white;"href="{{url_for('rewards')}}">Rewards</a>
                     
                 </nav>
                 </form>
