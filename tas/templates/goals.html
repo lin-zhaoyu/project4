@@ -32,8 +32,8 @@
       </ul>
 
       <script>
-      var checked;
-      var closed;
+      var checked = 0;
+      var closed = 0;
       // Create a "close" button and append it to each list item
       var myNodelist = document.getElementsByTagName("LI");
       var i;
@@ -50,20 +50,29 @@
       var i;
       for (i = 0; i < close.length; i++) {
         close[i].onclick = function() {
-          var div = this.parentElement;
-          div.style.display = "none";
           closed += 1;
           console.log(closed);
+          var div = this.parentElement;
+          div.style.display = "none";
         }
       }
 
       // Add a "checked" symbol when clicking on a list item
       var list = document.querySelector('ul');
+      checked += 1;
       list.addEventListener('click', function(ev) {
+        // ev.target.text = "true";
+        if(ev.target.text !== "true"){
+          ev.target.text = "true";
+        }
+        else if(ev.target.text === "true"){
+          ev.target.text = "false";
+        };
+        console.log(ev.target.text);
         if (ev.target.tagName === 'LI') {
-          ev.target.classList.toggle('checked');
           checked += 1;
           console.log(checked);
+          ev.target.classList.toggle('checked');
         }
       }, false);
 
@@ -88,6 +97,8 @@
 
         for (i = 0; i < close.length; i++) {
           close[i].onclick = function() {
+            closed += 1;
+            console.log("closed: " + closed);
             var div = this.parentElement;
             div.style.display = "none";
           }
