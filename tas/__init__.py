@@ -9,6 +9,7 @@ db.init_db()
 
 app.register_blueprint(auth.bp)
 
+app.secret_key = 'Add your secret key'
 
 @app.route("/")
 def home():
