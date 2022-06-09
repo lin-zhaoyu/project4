@@ -112,14 +112,14 @@ def login():
             else:
                 if hashed[0] == request.form['password']:
                     session['username'] = request.form['username']
-                    return redirect('/')
+                    return render_template("tas.html")
                 else:
                     return render_template("login.html", name="Login", action="/login", error="Invalid username or password")
         else:
             return render_template("login.html", name="Login", action="/login", error="An error occurred. Please try logging in again.")
     else:
         print("logged in 1")
-        return render_template("tas.html", action="/login", name="Login")
+        return render_template("login.html", action="/login", name="Login")
         # this is for logging in again*
 
 # Logout function
