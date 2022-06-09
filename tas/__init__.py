@@ -5,7 +5,7 @@ import auth
 
 app = Flask(__name__)
 
-init_db()
+db.init_db()
 
 app.register_blueprint(auth.bp)
 
