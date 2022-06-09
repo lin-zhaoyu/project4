@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <html>
-    
+
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -18,7 +18,7 @@
             <form action = "/login" method="POST">
               <div style="white-space:nowrap">
                 <label for="user">:Username</label>
-                <input class="form" name = "username" type="text" id="user"> 
+                <input class="form" name = "username" type="text" id="user">
               </div>
               <div style="white-space:nowrap">
                 <label for="pass">:Password</label>
@@ -27,7 +27,7 @@
               <button class="btn cusbtn" type="submit">Login</button>
               <br>
               <a style="text-shadow: 2px; color:white"href="/signup">Don't have an account? Register now</a>
-              {{error}}
+              <p style="text-shadow: 2px; color:red">{{error}}
             </form>
           {%else%}
           <h3>Register</h3>
@@ -35,7 +35,7 @@
             <form action = "/login" method="POST">
               <div style="white-space:nowrap">
                 <label for="user">:Username</label>
-                <input class="form" name = "username" type="text" id="user"> 
+                <input class="form" name = "username" type="text" id="user">
               </div>
               <div style="white-space:nowrap">
                 <label for="pass">:Password</label>
@@ -44,10 +44,10 @@
               <button class="btn cusbtn" type="submit">Register</button>
               <br>
               <a style="text-shadow: 2px; color:white"href="/login">Already have an account? Login</a>
-              {{error}}
+              <p style="text-shadow: 2px; color:red">{{error}}
             </form>
           {% endif %}
-          
+
         </div>
     </Body>
 </html>
