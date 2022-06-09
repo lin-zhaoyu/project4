@@ -3,29 +3,11 @@ import os
 import db
 import auth
 
-def create_app():
-    app = Flask(__name__)
-    # Configure app key & DB location
-    app.config.from_mapping(
-        SECRET_KEY = os.urandom(32),
-        DATABASE = os.path.join(app.instance_path, db.DB_FILE)
-    )
-    # Ensure the DB location exists
-    try:
-        os.makedirs(app.instance_path)
-    except OSError:
-        pass
+app = Flask(__name__)
 
-    return app
-
-app = create_app()
+init_db()
 
 app.register_blueprint(auth.bp)
-
-with app.app_context():
-    db.init_db()
-    d = db.get_db()
-    c = d.cursor()
 
 
 @app.route("/")

@@ -11,11 +11,10 @@ create_users = '''CREATE TABLE IF NOT EXISTS USERS(
 
 
 def get_db():
-    if 'db' not in g:
-        g.db = sqlite3.connect(DB_FILE)
-        g.db.row_factory = sqlite3.Row
-    return g.db
-
+    DATABASE = os.path.join(os.path.dirname(__file__), "database.db")
+    db = sqlite3.connect(DATABASE, check_same_thread=False, timeout=10)
+    return db
+    
 def init_db():
     d = get_db()
     c = d.cursor()
