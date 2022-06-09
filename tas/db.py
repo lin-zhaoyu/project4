@@ -1,5 +1,6 @@
 from flask import g
 import sqlite3
+import os
 
 DB_FILE="database.db"
 
@@ -14,7 +15,7 @@ def get_db():
     DATABASE = os.path.join(os.path.dirname(__file__), "database.db")
     db = sqlite3.connect(DATABASE, check_same_thread=False, timeout=10)
     return db
-    
+
 def init_db():
     d = get_db()
     c = d.cursor()
