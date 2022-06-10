@@ -112,7 +112,7 @@ def login():
             else:
                 if hashed[0] == request.form['password']:
                     session['username'] = request.form['username']
-                    return render_template("tas.html")
+                    return render_template("rewards.html")
                 else:
                     return render_template("login.html", name="Login", action="/login", error="Invalid username or password")
         else:
