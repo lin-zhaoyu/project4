@@ -2,31 +2,43 @@
 
 <html>
 
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <!-- Bootstrap CSS -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-        <link rel = "stylesheet" href = "../static/css/style.css">
-    </head>
-    <body>
-        <div class="container-lg" style="padding-top:20px">
-            {%block content%}
-            {%endblock content%}
-            <div class="d-grid gap-2 d-md-flex justify-content-md-center" style="padding-top:10px">
-                <form method="post" action="/">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+
+<body>
+    <div class="container-lg" style="padding-top:20px">
+        {%block content%}
+        {%endblock content%}
+        <div class="d-grid gap-2 d-md-flex justify-content-md-center" style="padding-top:10px">
+            <form method="post" action="/">
                 <nav class="nav nav-pills flex-column flex-sm-row fw-bold">
 
-                    <a class="flex-sm-fill text-sm-center nav-link" style="background-color: rgb(172, 220, 224, {% block tasbut %} {%endblock tasbut %}); color: white;" aria-current="page" href="{{url_for('tas')}}">Tasks</a>
-                    <a class="flex-sm-fill text-sm-center nav-link" style="background-color: rgb(172, 220, 224, {% block goalbut %} {%endblock goalbut %}); color: white;"href="{{url_for('goals')}}">Goals</a>
-                    <a class="flex-sm-fill text-sm-center nav-link" style="background-color: rgb(172, 220, 224, {% block rewardbut %} {%endblock rewardbut %}); color: white;"href="{{url_for('rewards')}}">Rewards</a>
-                    <a class="flex-sm-fill text-sm-center nav-link btn cusbtn" style="color: white; background-color: rgb(49, 49, 49);"href="/logout">Log Out</a>
+                    <!-- <a class="flex-sm-fill text-sm-center nav-link" style="background-color: rgb(172, 220, 224, {% block tasbut %} {%endblock tasbut %}); color: white;" aria-current="page" href="{{url_for('tas')}}">Tasks</a> -->
+                    <a class="flex-sm-fill text-sm-center nav-link"
+                        style="background-color: rgb(172, 220, 224, {% block goalbut %} {%endblock goalbut %}); color: white;"
+                        href="{{url_for('goals')}}">Goals</a>
+                    <a class="flex-sm-fill text-sm-center nav-link"
+                        style="background-color: rgb(172, 220, 224, {% block rewardbut %} {%endblock rewardbut %}); color: white;"
+                        href="{{url_for('rewards')}}">Rewards</a>
+                    <a class="flex-sm-fill text-sm-center nav-link btn cusbtn"
+                        style="color: white; background-color: rgb(49, 49, 49);" href="/logout">Log Out</a>
 
                 </nav>
-                </form>
-            </div>
+            </form>
         </div>
-    </body>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+    integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+    crossorigin="anonymous"></script>
+
 </html>
