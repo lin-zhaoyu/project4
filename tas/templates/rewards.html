@@ -14,13 +14,25 @@
             Animation
         </button>
         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-            <li><a class="dropdown-item" onclick="playAnimation(0);">Idle</a></li>
-            <li><a class="dropdown-item" onclick="playAnimation(1);">Run</a></li>
-            <li><a class="dropdown-item" onclick="playAnimation(2);">Dazed</a></li>
-            <li><a class="dropdown-item" onclick="playAnimation(3);">Roll</a></li>
-            <li><a class="dropdown-item" onclick="playAnimation(4);">Bite</a></li>
-            <li><a class="dropdown-item" onclick="playAnimation(5);">Derp</a></li>
-            <li><a class="dropdown-item" onclick="playAnimation(6);">Stanky Leg</a></li>
+          <li><a class="dropdown-item" onclick="playAnimation(0);">Idle</a></li>
+          {% if score >= 5 %}
+          <li><a class="dropdown-item" onclick="playAnimation(1);">Run</a></li>
+          {% endif %}
+          {% if score >= 10 %}
+          <li><a class="dropdown-item" onclick="playAnimation(2);">Dazed</a></li>
+          {% endif %}
+          {% if score >= 15 %}
+          <li><a class="dropdown-item" onclick="playAnimation(3);">Roll</a></li>
+          {% endif %}
+          {% if score >= 20 %}
+          <li><a class="dropdown-item" onclick="playAnimation(4);">Bite</a></li>
+          {% endif %}
+          {% if score >= 25 %}
+          <li><a class="dropdown-item" onclick="playAnimation(5);">Derp</a></li>
+          {% endif %}
+          {% if score >= 20 %}
+          <li><a class="dropdown-item" onclick="playAnimation(6);">Stanky Leg</a></li>
+          {% endif %}
         </ul>
     </div>
     <div class="card-body">
