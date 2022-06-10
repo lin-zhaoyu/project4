@@ -72,8 +72,5 @@ def logout():
     return redirect("/")
 if __name__ == "__main__":
     db.create_all()
-    new_todo = Todo(title="todo 1", status=False)
-    db.session.add(new_todo) 
-    db.session.commit()
     app.debug = True
     app.run()
