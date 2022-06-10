@@ -78,7 +78,7 @@ function playAnimation(number) {
   return [frameY, limit, staggerFrames];
 }
 //animation = get stuff from drop down menu
-animation = "stanky-leg";
+animation = "idle";
 if (animation == "idle") {
   playAnimation(0);
   //   console.log(setFrame(0));
