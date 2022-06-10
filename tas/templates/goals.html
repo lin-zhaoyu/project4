@@ -48,8 +48,8 @@
         <span> complete</span>
         {% endif %}
 
-        <a class="ui blue button" href="/updateGoals/{{ todo.id }}">Update</a>
-        <a class="ui red button" href="/deleteGoals/{{ todo.id }}">Delete</a>
+        <a class="update-goals" href="/updateGoals/{{ todo.id }}">Update</a>
+        <a class="delete-goals" href="/deleteGoals/{{ todo.id }}">Delete</a>
 
         {% endfor %}
     </div>
