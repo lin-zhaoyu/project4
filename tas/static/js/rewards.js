@@ -2,13 +2,15 @@ var level = 1;
 var levelupPoint = level * 30;
 var tasksCompleted = 1;
 document.getElementById("level").innerHTML =
-  "do 5 more tasks to unlock more animations!: " + score;
+  "Do tasks to unlock more animations!";
 
 function myScore() {
   console.log("your score is : " + score);
   return score;
 }
-
+if (score == 5) {
+  console.log("you score is five");
+}
 const canvas = document.getElementById("canvas1");
 myScore();
 

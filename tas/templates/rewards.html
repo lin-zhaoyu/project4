@@ -1,43 +1,41 @@
-<!DOCTYPE html>
-<html>
+{% extends 'navbar.html' %} 
+{% block tasbut %} 0.4 {% endblock tasbut %} 
+{% block goalbut%} 0.4 {%endblock goalbut %} 
+{% block rewardbut %} 0.8 {% endblock rewardbut %} 
+{%block content%}
 
-<head>
-
-</head>
-
-<body>
-    <div class="container" style="background-color: rgb(255, 255, 255, 0.4); padding-bottom: 5%;">
-        <h1 id="level">Level </h1>
-        <h1 id="score">{{score}} </h1>
-
+<div class="card" style="margin: 5px;">
+    <div class="card-header">
+        <h1 id="level" style="text-align:center">Level </h1>
     </div>
-    <div></div><canvas id="canvas1" style="border: 5px solid blue;
-            position: relative;
-            
-            top: 100px;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 600px;
-            height: 600px;
-            background-color: white;"></canvas>
+    <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+          Animation
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <li><a class="dropdown-item" onclick="functionToChangeAnimation(Run);">Run</a></li>
+          <li><a class="dropdown-item" onclick="functionToChangeAnimation(Idle);">Idle</a></li>
+          <li><a class="dropdown-item" onclick="functionToChangeAnimation(Run);">Run</a></li>
+        </ul>
+      </div>
+    <div class="card-body">
+        <canvas 
+        id="canvas1" 
+        style="
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        width: 400px;
+        height: 400px;
+        background-color: white;
+        border-radius: 15px;">
+    </canvas>
     </div>
-    <div style="height :">{% extends 'navbar.html' %} {% block tasbut %} 0.4 {% endblock tasbut %} {% block goalbut
-        %} 0.4 {%
-        endblock
-        goalbut %} {% block rewardbut %} 0.8 {% endblock rewardbut %} {% block logoutbut %} 0.4 {% endblock
-        logoutbut %}
-        {%block content%}</div>
-
-    <!-- all html for body goes here -->
-
-
-
-
-    <script type="text/javascript">
-        score = "{{score}}"
-    </script>
-    <script src="../static/js/rewards.js"></script>
-    {%endblock content%}
-</body>
-
-</html>
+</div>
+<script type="text/javascript">
+    score = "{{score}}"
+</script>
+<script src="../static/js/rewards.js"></script>
+{%endblock content%}
