@@ -18,6 +18,7 @@ db = SQLAlchemy(app)
 
 score = 0
 class Todo(db.Model):
+    global score
     score = 0
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(100))
