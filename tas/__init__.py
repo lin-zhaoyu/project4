@@ -12,13 +12,13 @@ app.register_blueprint(auth.bp)
 
 app.secret_key = 'Add your secret key'
 
-
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.sqlite'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
-
+score = 0
 class Todo(db.Model):
+    score = 0
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(100))
     status = db.Column(db.Boolean)
@@ -41,10 +41,17 @@ def updateGoals(todo_id):
     return redirect(url_for("goals"))
 @app.route("/deleteGoals/<int:todo_id>")
 def delete(todo_id):
+    global score
     todo = Todo.query.filter_by(id=todo_id).first()
     db.session.delete(todo)
+    if(todo.status == True):
+        score += 1
+        print("Added one to score! score is now: " + str(score))
     db.session.commit()
     return redirect(url_for("goals"))
+
+
+
 @app.route("/")
 def home():
     return render_template("index.html")
@@ -62,7 +69,7 @@ def goals():
 
 @app.route("/rewards")
 def rewards():
-    return render_template("rewards.html")
+    return render_template("rewards.html", score = score)
 @app.route("/logout")
 def logout():
     """

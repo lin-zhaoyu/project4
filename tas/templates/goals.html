@@ -49,9 +49,13 @@
         {% endif %}
 
         <a class="update-goals" href="/updateGoals/{{ todo.id }}">Update</a>
+        {% if todo.status == False %}
         <a class="delete-goals" href="/deleteGoals/{{ todo.id }}">Delete</a>
-
+        {% else %}
+        <a class="done-goals" href="/deleteGoals/{{ todo.id }}">DONE!</a>
+        {% endif %}
         {% endfor %}
+
     </div>
 
     {%endblock content%}
