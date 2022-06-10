@@ -22,11 +22,27 @@ class Todo(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(100))
     status = db.Column(db.Boolean)
+
 @app.route("/addGoals", methods = ["POST"])
 def addGoals():
     title = request.form.get("title")
     new_todo = Todo(title = title, status = False)
     db.session.add(new_todo)
+    db.session.commit()
+    return redirect(url_for("goals"))
+
+@app.route("/updateGoals/<int:todo_id>")
+def updateGoals(todo_id):
+    todo = Todo.query.filter_by(id=todo_id).first()
+    print("initial status " + str(todo.status))
+    todo.status = not todo.status
+    print("initial status "  + str(todo.status))
+    db.session.commit()
+    return redirect(url_for("goals"))
+@app.route("/deleteGoals/<int:todo_id>")
+def delete(todo_id):
+    todo = Todo.query.filter_by(id=todo_id).first()
+    db.session.delete(todo)
     db.session.commit()
     return redirect(url_for("goals"))
 @app.route("/")

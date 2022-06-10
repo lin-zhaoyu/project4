@@ -42,14 +42,14 @@
     <div class="container" style="background-color: rgb(255, 255, 255, 0.4); padding-bottom: 5%; color: black;">
         {% for todo in todo_list%}
         <p> {{ todo.id }} | {{ todo.title }} </p>
-        {% if todo.complete == False %}
+        {% if todo.status == False %}
         <span> not complete</span>
         {% else %}
-        <span> not complete</span>
+        <span> complete</span>
         {% endif %}
 
-        <a href="/"> edit</a>
-        <a href="/"> delete</a>
+        <a class="ui blue button" href="/updateGoals/{{ todo.id }}">Update</a>
+        <a class="ui red button" href="/deleteGoals/{{ todo.id }}">Delete</a>
 
         {% endfor %}
     </div>
