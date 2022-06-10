@@ -15,10 +15,10 @@ const canvas = document.getElementById("canvas1");
 myScore();
 
 const ctx = canvas.getContext("2d");
-const CANVAS_WIDTH = 600;
-const CANVAS_HEIGHT = 600;
+const CANVAS_WIDTH = (canvas.width = 600);
+const CANVAS_HEIGHT = (canvas.height = 600);
 const playerImage = new Image();
-playerImage.src = "tas/static/images/shadow_dog.png";
+playerImage.src = "../../static/images/shadow_dog.png";
 const spriteWidth = 575;
 const spriteHeight = 523;
 let frameX = 0;
@@ -42,6 +42,7 @@ function animate() {
     spriteWidth,
     spriteHeight
   );
+  //   ctx.drawImage(playerImage, 0, 0);
   if (gameFrame % staggerFrames == 0) {
     if (frameX < 6) frameX++;
     else frameX = 0;
@@ -49,4 +50,4 @@ function animate() {
   gameFrame++;
   requestAnimationFrame(animate);
 }
-// animate();
+animate();
