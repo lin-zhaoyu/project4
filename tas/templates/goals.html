@@ -32,28 +32,38 @@
 </head>
 
 <body>
-    <form class="ui form" action="/addGoals" method="post">
-        <div class="field">
-            <label>Todo Title</label>
-            <input type="text" name="title" placeholder="Enter Todo..."><br>
-        </div>
-        <button class="ui blue button" type="submit">Add</button>
+    <form class="ui field" action="/addGoals" method="post">
+        <div id="myDIV" class="header field">
+            <h2 style="margin:5px">My To Do List</h2>
+            <input type="text" name="title" placeholder="Enter Todo...">
+            <span class="ui blue button addBtn" type="submit">Add</span>
+        </div>   
     </form>
-    <div class="container" style="background-color: rgb(255, 255, 255, 0.4); padding-bottom: 5%; color: black;">
+    <br>
+    <div class="container" style="background-color: rgb(255, 255, 255, 0.6); padding-bottom: 5%; color: black; border-radius: 15px;">
+        <br>
         {% for todo in todo_list%}
-        <p> {{ todo.id }} | {{ todo.title }} </p>
-        {% if todo.status == False %}
-        <span> not complete</span>
-        {% else %}
-        <span> complete</span>
-        {% endif %}
+        <div class="card" style="margin: 5px;">
+            <div class="card-header"></div>
+            <div class="card-body">
+                <div class="tasks">       
+                    {% if todo.status == False %}
+                        <img src="../static/images/inprogress.png"/>
+                    {% else %}
+                        <img src="../static/images/done.png"/>
+                    {% endif %}
+                    <h4 class="card-title"> {{ todo.id }} | {{ todo.title }} </h4>
 
-        <a class="update-goals" href="/updateGoals/{{ todo.id }}">Update</a>
-        {% if todo.status == False %}
-        <a class="delete-goals" href="/deleteGoals/{{ todo.id }}">Delete</a>
-        {% else %}
-        <a class="done-goals" href="/deleteGoals/{{ todo.id }}">DONE!</a>
-        {% endif %}
+                    <a class="ui btn cusbtn" style="float:right; margin-left:10px;" href="/updateGoals/{{ todo.id }}">Update</a>
+                    {% if todo.status == False %}
+                        <a class="ui btn cusbtn" style="float:right" href="/deleteGoals/{{ todo.id }}">Delete</a>
+                    {% else %}
+                        <a class="ui btn cusbtn" style="float:right" href="/deleteGoals/{{ todo.id }}">Done</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        
         {% endfor %}
 
     </div>
