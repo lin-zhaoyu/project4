@@ -1,74 +1,55 @@
-<!DOCTYPE html>
-<html>
 
-<head>
-
-    {% extends 'navbar.html' %}
+{% extends 'navbar.html' %}
 
 
-    {% block tasbut %}
-    0.4
-    {% endblock tasbut %}
+{% block tasbut %}
+0.4
+{% endblock tasbut %}
 
-    {% block goalbut %}
-    0.8
-    {% endblock goalbut %}
+{% block goalbut %}
+0.8
+{% endblock goalbut %}
 
-    {% block rewardbut %}
-    0.4
-    {% endblock rewardbut %}
+{% block rewardbut %}
+0.4
+{% endblock rewardbut %}
 
-    {%block content%}
-    <!-- all html for body goes here -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
-        crossorigin="anonymous"></script>
-    <script src="../static/js/script.js"></script>
-    <link rel="stylesheet" href="../static/css/style.css">
+{%block content%}
 
-
-
-</head>
-
-<body>
-    <form class="ui field" action="/addGoals" method="post">
-        <div id="myDIV" class="header field">
-            <h2 style="margin:5px">My To Do List</h2>
-            <input type="text" name="title" placeholder="Enter Todo...">
-            <button class="ui blue button addBtn" type="submit">Add</button>
-        </div>   
-    </form>
+<form class="ui field" action="/addGoals" method="post">
+    <div id="myDIV" class="header field">
+        <h2 style="margin:5px">My To Do List</h2>
+        <input type="text" name="title" placeholder="Enter Todo...">
+        <button class="ui blue button addBtn" type="submit">Add</button>
+    </div>   
+</form>
+<br>
+<div class="container" style="background-color: rgb(255, 255, 255, 0.6); padding-bottom: 5%; color: black; border-radius: 15px;">
     <br>
-    <div class="container" style="background-color: rgb(255, 255, 255, 0.6); padding-bottom: 5%; color: black; border-radius: 15px;">
-        <br>
-        {% for todo in todo_list%}
-        <div class="card" style="margin: 5px;">
-            <div class="card-header"></div>
-            <div class="card-body">
-                <div class="tasks">       
-                    {% if todo.status == False %}
-                        <img src="../static/images/inprogress.png"/>
-                    {% else %}
-                        <img src="../static/images/done.png"/>
-                    {% endif %}
-                    <h4 class="card-title"> {{ todo.id }} | {{ todo.title }} </h4>
+    {% for todo in todo_list%}
+    <div class="card" style="margin: 5px;">
+        <div class="card-header"></div>
+        <div class="card-body">
+            <div class="tasks">       
+                {% if todo.status == False %}
+                    <img src="../static/images/inprogress.png"/>
+                {% else %}
+                    <img src="../static/images/done.png"/>
+                {% endif %}
+                <h4 class="card-title"> {{ todo.id }} | {{ todo.title }} </h4>
 
-                    <a class="ui btn cusbtn" style="float:right; margin-left:10px;" href="/updateGoals/{{ todo.id }}">Update</a>
-                    {% if todo.status == False %}
-                        <a class="ui btn cusbtn" style="float:right" href="/deleteGoals/{{ todo.id }}">Delete</a>
-                    {% else %}
-                        <a class="ui btn cusbtn" style="float:right" href="/deleteGoals/{{ todo.id }}">Done</a>
-                    {% endif %}
-                </div>
+                <a class="ui btn cusbtn" style="float:right; margin-left:10px;" href="/updateGoals/{{ todo.id }}">Update</a>
+                {% if todo.status == False %}
+                    <a class="ui btn cusbtn" style="float:right" href="/deleteGoals/{{ todo.id }}">Delete</a>
+                {% else %}
+                    <a class="ui btn cusbtn" style="float:right" href="/deleteGoals/{{ todo.id }}">Done</a>
+                {% endif %}
             </div>
         </div>
-        
-        {% endfor %}
-
     </div>
+    
+    {% endfor %}
 
-    {%endblock content%}
-</body>
+</div>
 
-</html>
+{%endblock content%}
