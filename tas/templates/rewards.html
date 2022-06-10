@@ -1,29 +1,45 @@
-{% extends 'navbar.html' %}
+<!DOCTYPE html>
+<html>
 
-{% block tasbut %}
-0.4
-{% endblock tasbut %}
+<head>
 
-{% block goalbut %}
-0.4
-{% endblock goalbut %}
+</head>
 
-{% block rewardbut %}
-0.8
-{% endblock rewardbut %}
-{% block logoutbut %}
-0.4
-{% endblock logoutbut %}
-{%block content%}
-<!-- all html for body goes here -->
-<div class="container" style="background-color: rgb(255, 255, 255, 0.4); padding-bottom: 5%;">
-    <h1 id="level">Level </h1>
-    <h1 id="score">{{score}} </h1>
+<body>
+    <div class="container" style="background-color: rgb(255, 255, 255, 0.4); padding-bottom: 5%;">
+        <h1 id="level">Level </h1>
+        <h1 id="score">{{score}} </h1>
 
-</div>
-<script type="text/javascript">
-    var score = "{{score}}"
-</script>
-<script src="../static/js/rewards.js"></script>
+    </div>
+    <div style=" padding-top: 5%;"> <canvas id="canvas1" style="border: 5px solid ☐black;
+            position: relative;
+            top: 100px;
+            bottom: 20%;
+            left: 50%;
+            padding-top: 70px;
+            border: 5px black;
+            transform: translate(-50%, -50%);
+            width: 600px;
+            height: 600px;
+            background-color: white;"></canvas>
+    </div>
+    <div style="height :">{% extends 'navbar.html' %} {% block tasbut %} 0.4 {% endblock tasbut %} {% block goalbut
+        %} 0.4 {%
+        endblock
+        goalbut %} {% block rewardbut %} 0.8 {% endblock rewardbut %} {% block logoutbut %} 0.4 {% endblock
+        logoutbut %}
+        {%block content%}</div>
 
-{%endblock content%}
+    <!-- all html for body goes here -->
+
+
+
+
+    <script type="text/javascript">
+        score = "{{score}}"
+    </script>
+    <script src="../static/js/rewards.js"></script>
+    {%endblock content%}
+</body>
+
+</html>
