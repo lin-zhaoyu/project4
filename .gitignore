@@ -129,3 +129,5 @@ dmypy.json
 .pyre/
 
 /tas/database.db
+*Db.*
+*sqlite.*
